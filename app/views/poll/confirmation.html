@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/"
+},
+{
+text: "Poll confirmation"
+}
+]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+    titleText: "Application complete",
+    html: "Your reference number<br><strong>HDJ2123F</strong>"
+    }) }}
+
+    <p>
+      We have sent you a confirmation email.
+    </p>
+
+    {{ govukButton({
+    text: "Back to home page",
+    href: "/"
+    }) }}
+
+
+  </div>
+</div>
+
+{% endblock %}
